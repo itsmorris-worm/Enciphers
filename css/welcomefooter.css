@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  place-content: end;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/*---------------
+global style
+---------------*/
+/*define custome css variables*/
+:root {
+  --bg-black-150: #05595c;
+  --bg-black-155: #0e2b30;
+  --bg-fav-100: #fe4365;
+  --bg-fav-101: #6d0a81;
+  --bg-fav-102: #0992aa;
+  --bg-fav-103: lawngreen;
+  --bg-black-900: #000000;
+  --bg-black-100: #dddddd;
+  --bg-black-50: #eff0f4;
+  --bg-opacity: rgba(255, 255, 255, 0.5);
+  --text-black-900: #000000;
+  --text-black-750: #444;
+  --text-black-25: #fff;
+  --text-black-700: #333;
+  --text-black-600: #666666;
+  --text-black-500: #b2ce36;
+  --text-black-350: #aaa;
+  --text-black-300: #acacac;
+  --text-black-200: #f0f0f0;
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+}
