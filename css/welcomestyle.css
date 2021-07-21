@@ -140,6 +140,8 @@ header ul li a {
   color: var(--text-black-900);
   font-family: sans-serif;
   font-weight: 500;
+  font-size: 17px;
+  margin: 0px -12px"
 }
 
 .content .textBox p a {
@@ -557,11 +559,16 @@ Mobile view
 
 @media (max-width: 690px) {
   .content .textBox h2 {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   .content .textBox h3 {
     font-size: 1.2em;
   }
+  .content .textBox .ch {
+    font-weight: 530;
+    font-size: 15px;
+  }
+
   .thumb {
     bottom: 70%;
     left: 44%;
@@ -608,6 +615,10 @@ Mobile view
   .content .textBox h3 {
     font-size: 1em;
   }
+  .content .textBox .ch {
+    font-weight: 530;
+    font-size: 15px;
+  }
   .textBox h2 span {
     padding-right: 100px;
     font-size: 1.2em;
@@ -616,8 +627,41 @@ Mobile view
   .content .textBox h3 {
     font-size: 1.2em;
   }
+  .content .textBox .ch {
+    color: var(--text-black-900);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+  }
 }
-
+@media (max-width: 557px){
+  .content .imgBox .facebooks {
+    top:-110px;
+    right: 35px;
+    height: 80px;
+  }
+  .thumb li span {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 35px;
+    transform: translateY(-70px) translateX(-40px);
+  }
+  .content .textBox .ch {
+    color: var(--text-black-900);
+    font-family: sans-serif;
+    font-weight: 550;
+    font-size: .9em;
+  }
+}
+@media (max-width: 493px){
+  
+  .content .textBox .ch {
+    color: var(--text-black-900);
+    font-family: sans-serif;
+    font-weight: 550;
+    font-size: .8em;
+  }
+}
 /*---------------
 footer
 ----------------*/
