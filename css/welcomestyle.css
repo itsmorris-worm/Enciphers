@@ -633,11 +633,11 @@ Mobile view
     font-size: 12px;
     font-weight: 600;
     padding-left: 35px;
-    transform: translateY(-70px) translateX(-30px);
+    transform: translateY(-70px) translateX(-31px);
   }
 
   .thumb li a:hover {
-    transform: translateY(-70px) translateX(-30px);
+    transform: translateY(-70px) translateX(-31px);
   }
   .content .textBox .ch {
     color: var(--text-black-900);
