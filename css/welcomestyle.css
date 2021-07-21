@@ -658,8 +658,8 @@ Mobile view
   .content .textBox .ch {
     color: var(--text-black-900);
     font-family: sans-serif;
-    font-weight: 550;
-    font-size: .8em;
+    font-weight: 450;
+    font-size: .7em;
   }
 }
 /*---------------
