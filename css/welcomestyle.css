@@ -97,9 +97,10 @@ header .logoText {
   position:absolute;
   height: 900px;
   width: 950px;
-  right: 53%;
+  right: 77.3%;
   top: -425%;
   opacity: 0.25;
+  z-index: -1;
 }
 
 header ul {
@@ -107,6 +108,7 @@ header ul {
   display: flex;
 }
 header ul li {
+  z-index: 1;
   list-style: none;
 }
 header ul li a {
