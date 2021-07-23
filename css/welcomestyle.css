@@ -181,11 +181,8 @@ header ul li a {
   text-decoration: none;
 }
 .content .textBox a:hover {
-  background: linear-gradient(
-    -12deg,
-    var(--text-black-750),
-    var(--text-black-900)
-  );}
+  background: var(--bg-fav-103);
+}
 
 .content .imgBox {
   width: 600px;
