@@ -181,8 +181,11 @@ header ul li a {
   text-decoration: none;
 }
 .content .textBox a:hover {
-  background: var(--bg-fav-103);
-}
+  background: linear-gradient(
+    -12deg,
+    var(--text-black-750),
+    var(--text-black-900)
+  );}
 
 .content .imgBox {
   width: 600px;
@@ -397,7 +400,9 @@ Responsive
     opacity: .9;
   }
   header ul.navigation.active .col {
+    position: relative;
     color: white;
+    top: -200%;
     font-size: 30px;
     font-weight: 600;
   }
