@@ -13,17 +13,19 @@ global style
   --bg-fav-100: #fe4365;
   --bg-fav-101: #6d0a81;
   --bg-fav-102: #0992aa;
+  --bg-fav-103: #0b7070;
+  --bg-fav-104: #133542;
   --bg-black-900: #000000;
   --bg-black-100: #dddddd;
   --bg-black-50: #eff0f4;
   --bg-opacity: rgba(255, 255, 255, 0.5);
   --text-black-900: #000000;
   --text-black-750: #444;
-  --text-black-25: #fff;
+  --text-black-25: rgb(223, 223, 223);
   --text-black-700: #333;
   --text-black-600: #666666;
   --text-black-500: #b2ce36;
-  --text-black-350: #aaa;
+  --text-black-350: rgb(156, 156, 156);
   --text-black-300: #acacac;
   --text-black-200: #f0f0f0;
   --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
@@ -58,15 +60,15 @@ input {
   width: 2000px;
   height: 2000px;
   border-radius: 50%;
-  /* background-color: var(--text-black-500); */
-  background: linear-gradient(
+  background-color: var(--bg-fav-103);
+  /* background: linear-gradient(
     -12deg,
     var(--bg-fav-101),
     var(--bg-black-150),
     var(--bg-black-900),
     var(--bg-black-150),
     var(--bg-black-900)
-  );
+  ); */
 
   top: -10%;
   right: 48%;
@@ -116,7 +118,13 @@ form.sign-up-form {
   opacity: 0;
 }
 
+.sign-up-form .social-text {
+  text-align: center;
+  font-size: 15px;
+}
+
 .title {
+  text-align: center;
   font-size: 2.2rem;
   color: var(--text-black-900);
   margin-top: 10px;
@@ -176,20 +184,31 @@ form.sign-up-form {
 }
 
 .btn.ho2 {
-  background: linear-gradient(-12deg, var(--bg-fav-101), var(--bg-black-150));
+  /* background: linear-gradient(-12deg, var(--bg-fav-101), var(--bg-black-150)); */
+  background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155));
 }
 .btn.ho1:hover {
-  background-color: var(--bg-black-155);
+  background-color: var(--text-black-900);
 }
 .btn.ho2:hover {
-  background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155));
-  /* background: linear-gradient(-120deg, var(--bg-fav-101), var(--bg-black-150)); */
+  /* background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155)); */
+  background: linear-gradient(
+    -12deg,
+    var(--text-black-350),
+    var(--text-black-750),
+    var(--text-black-350)
+  );
 }
 .btn.ho3 {
   background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155));
 }
 .btn.ho3:hover {
-  background: linear-gradient(-12deg, var(--bg-fav-101), var(--bg-black-150));
+  background: linear-gradient(
+    -12deg,
+    var(--text-black-350),
+    var(--text-black-750),
+    var(--text-black-350)
+  );
 }
 
 .social-text {
@@ -217,7 +236,7 @@ form.sign-up-form {
 }
 
 .code-icon:hover {
-  color: var(--bg-fav-101);
+  color: var(--text-black-600);
 }
 
 .panels-container {
