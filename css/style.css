@@ -184,31 +184,19 @@ form.sign-up-form {
 }
 
 .btn.ho2 {
-  /* background: linear-gradient(-12deg, var(--bg-fav-101), var(--bg-black-150)); */
   background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155));
 }
 .btn.ho1:hover {
   background-color: var(--text-black-900);
 }
 .btn.ho2:hover {
-  /* background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155)); */
-  background: linear-gradient(
-    -12deg,
-    var(--text-black-350),
-    var(--text-black-750),
-    var(--text-black-350)
-  );
+  background: var(--bg-fav-103);
 }
 .btn.ho3 {
   background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155));
 }
 .btn.ho3:hover {
-  background: linear-gradient(
-    -12deg,
-    var(--text-black-350),
-    var(--text-black-750),
-    var(--text-black-350)
-  );
+  background: var(--bg-fav-103);
 }
 
 .social-text {
