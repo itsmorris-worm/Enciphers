@@ -14,7 +14,7 @@ global style
   --bg-fav-101: #6d0a81;
   --bg-fav-102: #0992aa;
   --bg-fav-103: #0b7070;
-  /* --bg-fav-104: #1a8d8d; */
+  --bg-black-750: #0e0d0d;
 
   --bg-black-900: #000000;
   --bg-black-100: #dddddd;
@@ -23,7 +23,7 @@ global style
   --text-black-900: #000000;
   --text-black-750: rgb(112, 112, 112);
   --text-black-25: #fff;
-  --text-black-700: #333;
+  --text-black-700: rgb(131, 131, 131);
   --text-black-600: #666666;
   --text-black-500: #b2ce36;
   --text-black-350: #aaa;
@@ -44,14 +44,18 @@ global style
 }
 section {
   position: fixed;
+  top: 0%;
+  left: 0;
   width: 100%;
   min-height: 100vh;
   padding: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: var(--text-black-25); */
+  background-color: var(--bg-black-100);
+  opacity: 0.9;
 }
+
 header {
   position: absolute;
   top: 0;
@@ -65,10 +69,10 @@ header {
 
 header .logo {
   position: absolute;
-  height: 60px;
-  width: 100px;
-  top: 25px;
-  margin-left: 0px;
+  height: 3.2rem;
+  width: 3.3rem;
+  top: 1.8rem;
+  left: 6.5rem;
   padding-right: 5px;
   max-width: 120%;
 }
@@ -76,10 +80,11 @@ header .logo {
 header .logoText {
   position: absolute;
   top: 41px;
-  margin-left: 80px;
+  margin-left: 60px;
+  margin-right: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  color: linear-gradient(-12deg, var(--bg-fav-101), var(--bg-black-150));
+  color: var(--bg-black-900);
   font-size: 22px;
   font-weight: 900;
   justify-content: space-between;
@@ -99,8 +104,9 @@ header .logoText {
   width: 950px;
   right: 77.3%;
   top: -425%;
-  opacity: 0.25;
+  opacity: 0.4;
   z-index: -1;
+
 }
 
 header ul {
@@ -113,8 +119,8 @@ header ul li {
 }
 header ul li a {
   display: inline-block;
-  color: var(--bg-black-155);
-  font-weight: 500;
+  color: var(--bg-black-900);
+  font-weight: 600;
   margin-left: 40px;
   text-decoration: none;
 }
@@ -136,21 +142,21 @@ header ul li a {
 }
 
 .content .textBox h2 {
-  color: var(--text-black-700);
+  color: var(--text-black-900);
   font-size: 1.6em;
   line-height: 1.4em;
   font-weight: 900;
 }
 
 .content .textBox h3 {
-  color: var(--text-black-700);
+  color: var(--text-black-900);
   font-size: 1.4em;
   line-height: 1.4em;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .content .textBox span {
-  color: var(--bg-black-155);
+  color: var(--bg-black-900);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 0.9em;
   font-size: 2.2em;
@@ -174,8 +180,8 @@ header ul li a {
   display: inline-block;
   margin-top: 20px;
   padding: 14px 43px;
-  /* background-color: red; */
-  background: linear-gradient(-12deg, var(--bg-fav-103), var(--bg-black-155));
+  background-color: black;
+  /* background: linear-gradient(-12deg, var(--bg-fav-103), var(--bg-black-155)); */
   color: #fff;
   border-radius: 40px;
   font-weight: 500;
@@ -183,11 +189,9 @@ header ul li a {
   text-decoration: none;
 }
 .content .textBox a:hover {
-  background: linear-gradient(
-    -12deg,
-    var(--text-black-750),
-    var(--text-black-900)
-  );}
+  /* background: var(--text-black-700); */
+  color: var(--bg-fav-100);
+}
 
 .content .imgBox {
   width: 600px;
@@ -195,11 +199,13 @@ header ul li a {
   justify-content: flex-end;
   padding-right: 240px;
   margin-top: 45px;
+  
 }
 
 .content .imgBox img {
   max-height: 400px;
   max-width: 360px;
+  
 }
 
 .thumb {
@@ -211,6 +217,7 @@ header ul li a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  filter: invert(1);
 }
 
 .thumb ul li {
@@ -225,7 +232,7 @@ header ul li a {
   display: inline-block;
   margin: 5px 0;
   transform: scale(0.6);
-  filter: invert(1);
+ 
 }
 
 .thumb li img {
@@ -234,6 +241,7 @@ header ul li a {
   margin-right: 5px;
   margin-top: 25px;
   max-width: 65px;
+  filter: invert(1);
 }
 
 .thumb li img:hover {
@@ -243,11 +251,13 @@ header ul li a {
 .thumb li a {
   text-decoration: none;
   font-size: 12px;
-  font-weight: 800;
-  color: #000000;
+  font-weight: 500;
+  color: var(--text-black-25);
   display: inline-block;
-  opacity: 0.8;
   transform: translateY(-30px);
+}
+.thumb li a:hover {
+  color: var(--bg-black-100);
 }
 
 .reset {
@@ -257,14 +267,13 @@ header ul li a {
   opacity: 0;
 }
 
-.circle1 {
+/* .circle1 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--bg-fav-103);
-  
+  background: var(--text-black-700);
   clip-path: circle(350px at left 800px);
   animation: spin1 10.5s linear infinite;
 }
@@ -275,15 +284,14 @@ header ul li a {
   100% {
     transform: translateY(300px);
   }
-}
+} */
 .circle2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--bg-fav-103);
- 
+  background: var(--text-black-900);
   clip-path: circle(800px at right 900px);
   animation: spin2 8.5s linear infinite;
 }
@@ -360,6 +368,15 @@ Responsive
     display: none;
   }
   
+  header .logo {
+    left: 2.6rem;
+  }
+  
+  header .logoText {
+    top: 40px;
+    margin-left: 75px;
+    
+  }
   .toggle {
     position: relative;
     top: 5px;
@@ -370,7 +387,7 @@ Responsive
     background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
-    filter: invert(0);
+    /* filter: invert(1); */
     z-index: 11;
   }
   .toggle.active {
@@ -461,25 +478,21 @@ Responsive
     align-items: center;
     flex-direction: row;
   }
-
+  .thumb li img {
+    height: 70px;
+    max-width: 60px;
+    padding-top: 20px;
+    margin-left: 35px;
+  }
   .thumb li img:hover {
     transform: translateY(4px);
   }
-
-  .thumb li img {
-    padding-top: 20px;
-    margin-left: 35px;
-    max-width: 65px;
-  }
-
   .thumb li a {
     text-decoration: none;
     font-size: 12px;
-    font-weight: 650;
-    color: #000000;
+    font-weight: 500;
     display: inline-block;
-    opacity: 0.6;
-    transform: translateY(-70px) translateX(50px);
+    transform: translateY(-80px) translateX(53px);
   }
 
   .content .imgBox .facebooks {
@@ -511,7 +524,7 @@ Responsive
     right: 40px;
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 882px) {
   .content .textBox h2 {
     font-size: 0.8em;
   }
@@ -524,24 +537,23 @@ Responsive
     left: 60%;
   }
 
-  .thumb li img:hover {
-    transform: translateY(-5px);
-  }
-
   .thumb li img {
     left: -90px;
     right: 10%;
     margin-left: 15px;
   }
+  .thumb li img:hover {
+    transform: translateY(5px);
+  }
   .thumb li a {
     font-size: 12px;
     font-weight: 600;
     padding-left: 30px;
-    transform: translateY(-70px) translateX(-0px);
+    transform: translateY(-80px) translateX(4px);
   }
 
   .thumb li a:hover {
-    transform: translateY(-70px) translateX(-0px);
+    transform: translateY(-82px) translateX(-0px);
   }
   header ul.navigation.active .col {
     color: white;
@@ -600,18 +612,18 @@ Responsive
   }
 
   .thumb li img:hover {
-    transform: translateY(-5px);
+    transform: translateY(5px);
   }
 
   .thumb li a {
     font-size: 12px;
     font-weight: 600;
     padding-left: 45px;
-    transform: translateY(-70px) translateX(-35px);
+    transform: translateY(-80px) translateX(-32px);
   }
 
   .thumb li a:hover {
-    transform: translateY(-70px) translateX(-35px);
+    transform: translateY(-82px) translateX(-35px);
   }
   
   header ul.navigation.active .col {
@@ -624,9 +636,7 @@ Responsive
     top: -28%;
     right: 55px;
   }
-  .circle2{
-    background-color:var(--text-black-300);
-  }
+  
 }
 
 @media (max-width: 600px){
@@ -634,6 +644,12 @@ Responsive
     height: 350px;
     width: 280px;
     right: 35px;
+  }
+  .content .imgBox .facebooks{
+    top: 25%;
+      right: 240px;
+      height: 200px;
+      opacity: 0.2;
   }
 }
 @media (max-width: 575px) {
@@ -654,14 +670,14 @@ Responsive
     font-size: 12px;
     font-weight: 600;
     padding-left: 40px;
-    transform: translateY(-70px) translateX(-30px);
+    transform: translateY(-80px) translateX(-30px);
   }
   .thumb li a:hover {
     
-    transform: translateY(-70px) translateX(-30px);
+    transform: translateY(-82px) translateX(-30px);
   }
   .content .textBox .ch {
-    color: var(--text-black-900);
+    /* color: var(--text-black-900); */
     font-family: sans-serif;
     font-weight: 500;
     font-size: 1em;
@@ -683,23 +699,19 @@ Responsive
   .content .textBox h3{
     font-size: .9em;
   }
-  .content .imgBox .facebooks {
-    top:-110px;
-    right: 35px;
-    height: 80px;
-  }
+  
   .thumb li a {
     font-size: 12px;
     font-weight: 600;
     padding-left: 35px;
-    transform: translateY(-70px) translateX(-30px);
+    transform: translateY(-80px) translateX(-21px);
   }
   .thumb li a:hover {
     
-    transform: translateY(-70px) translateX(-30px);
+    transform: translateY(-82px) translateX(-21px);
   }
   .content .textBox .ch {
-    color: var(--text-black-900);
+    /* color: var(--text-black-900); */
     font-family: sans-serif;
     font-weight: 550;
     font-size: .9em;
@@ -722,22 +734,20 @@ Responsive
     font-size: 12px;
     font-weight: 600;
     padding-left: 35px;
-    transform: translateY(-70px) translateX(-32px);
+    transform: translateY(-80px) translateX(-27px);
   }
 
   .thumb li a:hover {
-    transform: translateY(-70px) translateX(-32px);
+    transform: translateY(-80px) translateX(-27px);
   }
   .content .textBox .ch {
-    color: var(--text-black-900);
+    /* color: var(--text-black-900); */
     font-family: sans-serif;
     font-weight: 570;
     font-size: .78em;
   }
   .content .imgBox .facebooks {
-    top: -28.5%;
-    right: 35px;
-    height: 70px;
+    right: 180px;
   }
 }
   @media (max-width: 490px){
@@ -763,28 +773,27 @@ Responsive
     
     .thumb li img{
       margin-top:5px;
-      width: 52px;
+      height: 65px;
+      width: 50px;
     }
     .thumb li a {
       font-size: 10px;
       font-weight: 800;
       padding-left: 35px;
-      transform: translateY(-70px) translateX(-30px);
+      transform: translateY(-80px) translateX(-24px);
     }
   
     .thumb li a:hover {
-      transform: translateY(-70px) translateX(-30px);
+      transform: translateY(-82px) translateX(-24px);
     }
     .content .textBox .ch {
-      color: var(--text-black-900);
+      /* color: var(--text-black-900); */
       font-family: sans-serif;
       font-weight: 570;
       font-size: .8em;
     }
     .content .imgBox .facebooks {
-      top: -28.5%;
-      right: 35px;
-      height: 60px;
+      right: 150px;
     }
   }
   @media (max-width: 415px){
@@ -794,6 +803,24 @@ Responsive
       top: 150px;
       right: 10px;
     }
+    header .logo {
+      height: 2.8rem;
+      width: 3rem;
+      top: 2.2rem;
+      left: 1.1rem;
+    }
+    
+    header .logoText {
+      top: 48px;
+      margin-left: 45px;  
+      font-size: 15px;
+    }
+    .content .imgBox .facebooks {
+      top: 20%;
+      right: 140px;
+      height: 180px;
+      opacity: 0.2;
+    }
   }
   @media (max-width: 399px){
    
@@ -801,44 +828,48 @@ Responsive
       font-size: 0.7em;
     }
     .content .textBox h2 span {
-      font-size: 1.6em;
+      font-size: 1.3em;
     }
     .content .textBox h3{
-      font-size: .8em;
+      font-size: .6em;
     }
     
     .thumb li img{
       margin-top:5px;
-      margin-left: 5px;
-      width: 35px;
+      margin-left: 12px;
+      
+      height: 50px;
+      max-width: 32px;
     }
     .thumb li a {
-      font-size: 10px;
-      font-weight: 800;
-      padding-left: 35px;
-      transform: translateY(-70px) translateX(-25px);
+      font-size: 7px;
+      font-weight: 600;
+      padding-left: 30px;
+      transform: translateY(-55px) translateX(-8px);
     }
   
     .thumb li a:hover {
-      transform: translateY(-70px) translateX(-25px);
+      transform: translateY(-57px) translateX(-8px);
     }
     .content .textBox .ch {
-      color: var(--text-black-900);
+      /* color: var(--text-black-900); */
       font-family: sans-serif;
       font-weight: 540;
-      font-size: .7em;
+      font-size: .5em;
     }
-    .content .imgBox .facebooks {
-      top: -28.5%;
-      right: 35px;
-      height: 55px;
-    }
+    
   }
   @media (max-width: 375px){
     header .lo {
       height: 300px;
-      width: 200px;
+      width: 180px;
       top: 195px;
-      right: 5px;
+      right: 2px;
+    }
+    .content .imgBox .facebooks {
+      top: 13%;
+      right: 120px;
+      height: 150px;
+      opacity: 0.2;
     }
   }
