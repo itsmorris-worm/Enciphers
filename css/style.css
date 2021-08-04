@@ -13,7 +13,8 @@ global style
   --bg-fav-100: #fe4365;
   --bg-fav-101: #6d0a81;
   --bg-fav-102: #0992aa;
-  --bg-fav-103: #0b7070;
+  --bg-fav-103: #0a5e50;
+  --bg-fav-103z: #0b705f;
   --bg-fav-104: #133542;
   --bg-black-900: #000000;
   --bg-black-100: #dddddd;
@@ -60,7 +61,10 @@ input {
   width: 2000px;
   height: 2000px;
   border-radius: 50%;
-  background-color: var(--bg-fav-103);
+  background-color: var(--bg-black-900);
+  opacity: 0.88;
+  /* background-color: var(--bg-fav-103); */
+  /* background-color: red; */
   /* background: linear-gradient(
     -12deg,
     var(--bg-fav-101),
@@ -173,7 +177,7 @@ form.sign-up-form {
   outline: none;
   border-radius: 49px;
   cursor: pointer;
-  background-color: var(--bg-black-150);
+  background-color: var(--text-black-900);
   color: var(--text-black-25);
   text-transform: uppercase;
   text-align: center;
@@ -184,19 +188,39 @@ form.sign-up-form {
 }
 
 .btn.ho2 {
-  background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155));
+  background-color: var(--bg-black-900);
+  opacity: 0.7;
+  /* background: linear-gradient(-12deg, var(--bg-fav-101), var(--bg-black-150)); */
+  /* background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155)); */
 }
 .btn.ho1:hover {
   background-color: var(--text-black-900);
 }
 .btn.ho2:hover {
-  background: var(--bg-fav-103);
+  /* background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155)); */
+  /* background: linear-gradient(
+    -12deg,
+    var(--text-black-350),
+    var(--text-black-750),
+    var(--text-black-350)
+  ); */
+  background-color: var(--text-black-900);
+  opacity: 1;
 }
 .btn.ho3 {
-  background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155));
+  background-color: var(--bg-black-900);
+  opacity: 0.7;
+  /* background: linear-gradient(-120deg, var(--bg-fav-102), var(--bg-black-155)); */
 }
 .btn.ho3:hover {
-  background: var(--bg-fav-103);
+  /* background: linear-gradient(
+    -12deg,
+    var(--text-black-350),
+    var(--text-black-750),
+    var(--text-black-350)
+  ); */
+  background: var(--text-black-900);
+  opacity: 1;
 }
 
 .social-text {
@@ -217,7 +241,7 @@ form.sign-up-form {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--bg-black-150);
+  color: var(--text-black-900);
   font-size: 1.8rem;
   border-radius: 50%;
   transition: 0.3s;
