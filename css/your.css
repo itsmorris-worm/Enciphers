@@ -9,9 +9,9 @@ global style
 /*define custome css variables*/
 :root {
   --bg-black-150: #044749;
-  --bg-black-151: #0e2b30da;
-  --bg-black-152: #0e2b30a8;
-  --bg-black-153: #0e2b307a;
+  --bg-black-151: #000000c7;
+  --bg-black-152: #373838a8;
+  --bg-black-153: #3435357a;
 
   --bg-black-155: #0e2b30;
   --bg-fav-100: #fe4365;
@@ -27,7 +27,7 @@ global style
   --bg-black-50: #eff0f4;
   --bg-opacity: rgba(255, 255, 255, 0.5);
   --text-black-900: #000000;
-  --text-black-750: #444;
+  --text-black-750: rgb(39, 39, 39);
   --text-black-25: #fff;
   --text-black-700: rgba(255, 255, 255, 0.267);
   --text-black-600: #666666;
@@ -49,16 +49,18 @@ global style
   font-family: "Raleway", sans-serif;
 }
 section {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width: 100vw;
   height: 100vh;
-  /* max-height: 100%; */
-  height: 100%;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: var(--text-black-25); */
+}
+.sq1 {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100vw;
+  height: 180vh;
+  background-color: var(--text-black-900);
+  opacity: 0.9;
 }
 header {
   position: absolute;
@@ -73,25 +75,31 @@ header {
 
 header .logo {
   position: absolute;
-  height: 60px;
-  width: 100px;
-  top: 25px;
-  margin-left: 0px;
+  height: 3.2rem;
+  width: 3.3rem;
+  top: 1.3rem;
+  left: 8rem;
   padding-right: 5px;
   max-width: 120%;
+  filter: invert(1);
+  opacity: 0.6;
 }
 
 header .logoText {
   position: absolute;
   top: 41px;
   margin-left: 80px;
+  margin-right: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  color: linear-gradient(-12deg, var(--bg-fav-103), var(--bg-black-900));
+  color: var(--bg-black-100);
   font-size: 22px;
   font-weight: 900;
   justify-content: space-between;
   align-items: center;
+}
+header .logoText.active {
+  color: var(--bg-fav-100);
 }
 
 header ul {
@@ -103,98 +111,86 @@ header ul li {
 }
 header ul li a {
   display: inline-block;
-  color: var(--bg-black-900);
+  color: var(--bg-black-100);
   font-weight: 600;
   margin-left: 40px;
   text-decoration: none;
 }
 
-.searchBar input {
+.searchBar {
   position: absolute;
   top: 13%;
   left: 11%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.searchBar input {
   max-width: 300px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: var(--bg-fav-104);
   outline: none;
   line-height: 1;
-  width: 75%;
-  height: 47px;
-  padding-left: 30px;
-  padding-bottom: 4.5px;
+  width: 75rem;
+  height: 2.8rem;
+  padding: 15px 25px;
   font-size: 20px;
   font-weight: 400;
-  color: var(--bg-black-50);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--bg-black-100);
+  border: 2px solid var(--bg-black-100);
   border-radius: 55px;
   background: var(--bg-black-900);
-  opacity: 0.8;
-  z-index: 100;
+  opacity: 0.4;
 }
-
-.searchBar input::placeholder {
-  padding: 2px;
-  font-size: 18px;
+.searchBar input[placeholder] {
+  font-size: 17px;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* text-align: center; */
-  display: inline-block;
+  padding-bottom: 17px;
 }
 .searchBar input:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
+
 .quest1 ul {
   position: absolute;
-  top: 7.5%;
-  left: 11%;
-  width: 80%;
+  display: block;
+  top: 7%;
+  left: 12%;
+  width: 78%;
   margin: 100px auto 0;
-  padding-top: 1.2px;
-  padding-bottom: 1.2px;
-  box-sizing: border-box;
-  background-color: var(--bg-fav-104);
+  border-radius: 50px;
   color: var(--bg-black-50);
   box-shadow: inset 0 0 0 var(--bg-black-900);
-  border-radius: 10px;
   overflow: hidden;
-  opacity: 0.75;
-  z-index: 100;
+  opacity: 0.5;
 }
 
 .quest1 ul li {
   display: flex;
   text-align: center;
   justify-content: space-between;
+
   background-color: var(--bg-black-900);
   padding: 10px 20px;
   padding-left: 150px;
-  padding-right: 180px;
+  padding-right: 150px;
   font-weight: 500;
   font-size: 17px;
   margin: 5px 0;
-  transition: 0.5s;
 }
 
 .quest2 ul {
   position: absolute;
-  top: 16%;
-  left: 11%;
-  width: 80%;
+  top: 13%;
+  left: 13%;
+  width: 76%;
   margin: 100px auto 0;
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   box-sizing: border-box;
-  background-color: var(--bg-fav-104);
   color: var(--bg-black-50);
   box-shadow: inset 0 0 0 var(--bg-black-900);
-  border-radius: 10px;
+  border-radius: 48px;
   overflow: hidden;
   opacity: 0.75;
-  z-index: 100;
 }
 
 .quest2 ul li {
@@ -209,339 +205,58 @@ header ul li a {
   transition: 0.5s;
 }
 
-.quest2 ul li:nth-child(1) {
-  background: var(--bg-black-155);
-}
-.quest2 ul li:nth-child(2) {
+.quest2 ul li:nth-child(3n) {
   background: var(--bg-black-151);
 }
-.quest2 ul li:nth-child(3) {
+.quest2 ul li:nth-child(3n + 1) {
   background: var(--bg-black-152);
 }
-.quest2 ul li:nth-child(4) {
+.quest2 ul li:nth-child(3n + 2) {
   background: var(--bg-black-153);
-}
-.quest2 ul li:nth-child(12) {
-  background: var(--bg-black-153);
-}
-.quest2 ul li:nth-child(13) {
-  background: var(--bg-black-152);
-}
-.quest2 ul li:nth-child(14) {
-  background: var(--bg-black-151);
-}
-.quest2 ul li:nth-child(15) {
-  background: var(--bg-black-155);
 }
 
 .quest2 ul li:hover {
   transform: scale(0.98);
   background: rgb(0, 0, 0);
+  border-radius: 50px;
 }
 .quest2 ul li span a {
-  display: flex;
+  display: grid;
+  text-decoration: none;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 5px;
   letter-spacing: 15px;
-  padding-left: 75px;
-  padding-right: 80px;
+  padding-right: 10px;
 }
-.quest2 ul li span a a1 {
+.quest2 .name a1 {
   display: flex;
+  padding: 5px;
   color: var(--bg-black-50);
   text-decoration: none;
   letter-spacing: 0px;
-  /* padding-left: 75px; */
-  /* padding-right: 60px; */
 }
-.quest2 ul li span a i1:hover {
-  color: var(--bg-fav-100);
-}
-.quest2 ul li span a i2:hover {
-  color: var(--bg-fav-100);
-}
-.quest2 ul li span a i3:hover {
-  color: var(--bg-fav-100);
-}
-.quest2 ul li span a i4:hover {
-  color: var(--bg-fav-100);
-}
-
 .quest2 .name a1:hover {
   font-size: 16px;
   font-weight: 600;
   color: var(--bg-fav-1033);
 }
-.sq1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-fav-103);
-  clip-path: none;
-  animation: spin1 8.5s linear infinite;
-  opacity: 0.2;
-}
-.sq2 {
-  position: absolute;
-  top: -5%;
-  left: 0;
-  width: 100%;
-  height: 140%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-  opacity: 0.1;
-}
-.sq3 {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-black-150),
-    var(--bg-black-150),
-    var(--bg-black-900)
-  );
-  clip-path: none;
-  animation: spin3 8.5s linear infinite;
-  opacity: 0.4;
-}
-.sq4 {
-  position: absolute;
-  top: 12%;
-  left: 0;
-  width: 100%;
-  height: 80%;
-  background: linear-gradient(-12deg, var(--bg-fav-103), var(--bg-black-150));
-  opacity: 0.6;
-}
-.sq5 {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-103),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-  clip-path: none;
-  animation: spin5 8.5s linear infinite;
-  opacity: 0.3;
-}
-.sq6 {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-103),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
 
-  clip-path: none;
-  animation: spin6 8.5s linear infinite;
-  opacity: 0.3;
+.quest2 .link .item {
+  border: 2x solid white;
+  text-align: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 15px;
+  padding: 5px 2px;
 }
-.sq7 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-103),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-
-  clip-path: none;
-  animation: spin7 8.5s linear infinite;
-  opacity: 0.3;
-}
-.sq8 {
-  position: absolute;
-  top: 30%;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-103),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-
-  clip-path: none;
-  animation: spin8 8.5s linear infinite;
-  opacity: 0.4;
-}
-.sq9 {
-  position: absolute;
-  top: 60%;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-103),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-
-  clip-path: none;
-  animation: spin9 8.5s linear infinite;
-  opacity: 0.3;
-}
-
-@keyframes spin1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(100px);
-  }
-}
-
-@keyframes spin3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(100px);
-  }
-}
-@keyframes spin5 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(155px);
-  }
-}
-@keyframes spin6 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(-200px);
-  }
-}
-@keyframes spin7 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(155px);
-  }
-}
-@keyframes spin8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(100px);
-  }
-}
-@keyframes spin9 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(155px);
-  }
+.quest2 .link div:hover {
+  color: var(--bg-fav-100);
 }
 
 /*----------------------
 Responsive 
 ----------------------*/
-@media (max-width: 1170px) {
-  .quest1 ul {
-    top: 7%;
-  }
-  .quest1 ul li {
-    justify-content: space-between;
-    padding: 9px 10px;
-    padding-left: 150px;
-    padding-right: 120px;
-    font-size: 16px;
-  }
-  .quest2 ul {
-    top: 16.5%;
-    padding: 6px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-
-  .quest2 ul li {
-    /* justify-content: space-between; */
-    padding: 8px 10px;
-    font-weight: 500;
-    font-size: 16px;
-    padding-left: 15%;
-    /* padding-right: 10; */
-  }
-  .quest2 ul li span a {
-    padding-left: 35px;
-  }
-  .quest2 ul li .name {
-    text-align: center;
-    letter-spacing: 0px;
-  }
-  .quest2 ul li .link {
-    font-size: 10px;
-    font-weight: 300;
-    padding-left: 10px;
-  }
-
-  .quest3 ul {
-    top: 108%;
-  }
-
-  .quest2 .name a1:hover {
-    font-size: 19px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
-  }
-}
-
-@media (max-width: 913px) {
-  .quest2 ul li span a .spcl {
-    font-size: 13px;
-  }
-  .quest2 .name a1:hover {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
-  }
-}
-
-@media (max-width: 857px) {
-  header {
-    padding: 20px;
-  }
-  header .logo {
-    height: 60px;
-    width: 100px;
-    top: 25px;
-  }
+@media (max-width: 960px) {
   header ul {
     display: none;
   }
@@ -555,7 +270,7 @@ Responsive
     background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
-    filter: invert(0);
+    filter: invert(1);
     z-index: 11;
   }
   .toggle.active {
@@ -568,7 +283,6 @@ Responsive
     background-size: 130%;
     background-position: center;
     background-repeat: no-repeat;
-    /* filter: invert(1); */
     z-index: 110;
     opacity: 0;
   }
@@ -598,188 +312,182 @@ Responsive
     font-weight: 600;
     margin: 5px 0;
   }
-  .quest2 ul {
-    top: 19%;
+  .quest1 ul li {
+    font-size: 14px;
+  }
+  .quest1 ul li {
+    padding-left: 100px;
+    padding-right: 140px;
   }
   .quest2 ul li {
     font-size: 12px;
-    padding-left: 15%;
-  }
-
-  .quest2 ul li span a .spcl {
-    font-size: 10px;
   }
 
   .quest2 .name a1:hover {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
-  }
-}
-@media (max-width: 809px) {
-  .quest2 ul {
-    top: 17%;
-  }
-  .quest2 ul li {
-    font-size: 10px;
-    padding-left: 15%;
-  }
-  .quest2 ul li span a {
-    text-align: left;
-  }
-  .quest2 ul li span a .spcl {
-    font-size: 9px;
-  }
-  .quest2 .name a1:hover {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
-  }
-}
-
-@media (max-width: 759px) {
-  .quest2 .name a1:hover {
+    position: absolute;
     font-size: 13px;
-    font-weight: 600;
-    color: var(--bg-fav-1033);
   }
-  .quest2 ul li span a {
-    text-align: left;
-  }
-  .quest2 ul li span a .spcl {
-    font-size: 10px;
+  .quest2 .link .item {
+    font-size: 12px;
   }
 }
 
-@media (max-width: 719px) {
-  .quest2 .name a1:hover {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
+@media (max-width: 860px) {
+  header .logo {
+    top: 1.6rem;
+    left: 5.4rem;
+    padding-right: 5px;
+    max-width: 120%;
+  }
+  header .logoText {
+    top: 45px;
+    margin-left: 40px;
+    font-size: 18px;
+  }
+  .quest1 ul li {
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
-@media (max-width: 699px) {
-  .quest2 .name a1:hover {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
+@media (max-width: 635px) {
+  header .logo {
+    top: 1.6rem;
+    left: 3rem;
+    padding-right: 5px;
+    max-width: 120%;
   }
-}
-@media (max-width: 679px) {
+  header .logoText {
+    margin-left: 0px;
+  }
+  .toggle {
+    right: -50px;
+  }
+  .searchBar input {
+    max-width: 250px;
+    height: 2.5rem;
+  }
+  .searchBar input[placeholder] {
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
   .quest1 ul {
     top: 6%;
   }
-  .quest1 ul li {
-    justify-content: space-evenly;
-    padding: 8px 10px;
+  .quest2 ul {
+    top: 11%;
+  }
+  .quest2 ul li {
+    font-size: 10px;
+  }
+  .quest2 .name a1:hover {
+    font-size: 11px;
+  }
+  .quest2 .link .item {
+    font-size: 10px;
+  }
+  .quest2 ul li span a {
+    grid-gap: 3px;
+    letter-spacing: 10px;
+  }
+}
+
+@media (max-width: 435px) {
+  header .logo {
+    height: 3rem;
+    width: 3rem;
+    top: 1.6rem;
+    left: 2.3rem;
+    padding-right: 5px;
+    max-width: 120%;
+  }
+  header .logoText {
+    margin-left: -15px;
     font-size: 14px;
   }
-  .quest2 ul {
-    top: 15%;
-    padding: 6px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-  .quest2 ul li {
-    padding: 8px 10px;
-    font-weight: 400;
-    font-size: 10px;
-    padding-left: 15%;
-  }
-  .quest2 ul li span a {
-    text-align: center;
-
-    padding-left: 25px;
-  }
-  .quest3 ul {
-    top: 113%;
-  }
-  .quest2 .name a1:hover {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
-  }
-}
-@media (max-width: 575px) {
-  .quest2 ul li .link {
-    font-size: 9px;
-    font-weight: 300;
-    padding-left: 15px;
-    /* padding-left: 25px; */
-  }
-  .quest2 ul li span a .spcl {
-    font-size: 7px;
-  }
-  .quest2 .name a1:hover {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--bg-fav-103);
-  }
-}
-
-@media (max-width: 560px) {
-  .searchBar input {
-    top: 14.5%;
-    max-width: 200px;
-    height: 40px;
-    font-size: 15px;
-  }
-  .searchBar input::placeholder {
-    font-size: 12px;
-    font-weight: 500;
-  }
-  .quest1 ul {
-    top: 7%;
-  }
   .quest1 ul li {
-    padding: 7px 8px;
-    font-size: 12.5px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
-  .quest1 ul li span {
-    /* left: -180px; */
-    position: relative;
-    left: -10%;
-    top: 1px;
-    padding-left: 67px;
-    display: inline-block;
-    justify-content: space-between;
-  }
-
-  .quest2 ul {
-    top: 14.5%;
-    padding: 6px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-  }
-
   .quest2 ul li {
-    justify-content: space-evenly;
-    padding: 8px 10px;
-    font-weight: 400;
-    font-size: 9px;
-    padding-left: 100px;
-    padding-right: 40px;
-  }
-  .quest2 ul li span a {
-    padding-left: 35px;
-  }
-  .quest2 ul li .name {
-    text-align: center;
-    letter-spacing: 0px;
-    padding-left: 15px;
-  }
-  .quest2 ul li .link {
-    font-size: 10px;
-    font-weight: 300;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  .quest2 ul li span a .spcl {
     font-size: 8px;
   }
   .quest2 .name a1:hover {
+    font-size: 8.5px;
+  }
+  .quest2 .link .item {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .quest1 ul {
+    top: 6%;
+  }
+  .quest2 ul {
+    top: 11%;
+  }
+  .quest2 ul li {
+    font-size: 6px;
+  }
+  .quest2 .name a1:hover {
+    font-size: 7px;
+  }
+  .quest2 .link .item {
+    font-size: 7px;
+  }
+}
+@media (max-width: 340px) {
+  header .logo {
+    height: 2.4rem;
+    width: 2.4rem;
+    top: 1.4rem;
+  }
+  header .logoText {
+    top: 43%;
+    margin-left: -25px;
+    font-size: 11px;
+  }
+  .searchBar input {
+    max-width: 150px;
+    height: 2rem;
+  }
+  .searchBar input[placeholder] {
+    font-size: 13px;
+    padding-bottom: 15px;
+  }
+  .toggle {
+    top: 0%;
+    right: -50px;
+  }
+  .quest2 ul li {
+    font-size: 6px;
+  }
+  .quest2 .name a1:hover {
+    font-size: 6.5px;
+  }
+  .quest2 .link .item {
+    font-size: 5px;
+  }
+}
+@media (max-width: 281px) {
+  .toggle {
+    top: 0%;
+    right: -80px;
+  }
+  .quest1 ul li {
     font-size: 12px;
-    font-weight: 500;
-    color: var(--bg-fav-1033);
+  }
+  .quest2 ul li {
+    font-size: 5px;
+  }
+  .quest2 .name a1:hover {
+    font-size: 5.5px;
+  }
+  .quest2 .link .item {
+    font-size: 4px;
+  }
+  .quest2 ul li span a {
+    grid-gap: 1px;
+    letter-spacing: 10px;
   }
 }
