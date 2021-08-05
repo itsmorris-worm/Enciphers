@@ -502,6 +502,8 @@ Responsive
     height: 110px;
     z-index: -1;
   }
+  .circle2{
+    opacity: 0.1;
   
 }
 @media (max-width: 1000px){
