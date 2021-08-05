@@ -58,7 +58,7 @@ section {
   top: -5%;
   left: 0;
   width: 100vw;
-  height: 180vh;
+  height: 170vh;
   background-color: var(--text-black-900);
   opacity: 0.9;
 }
@@ -293,19 +293,21 @@ Responsive
     width: 50%;
     height: 100%;
     display: flex;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    justify-content: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: var(--text-black-900);
     color: var(--bg-black-50);
     z-index: 111;
-    opacity: 0.88;
+    opacity: 0.8;
   }
   header ul.navigation.active .col {
-    color: white;
-    padding-right: 45px;
-    font-size: 25px;
-    font-weight: 600;
+    color: var(--bg-black-100);
+    font-size: 24px;
+    font-weight: 800;
   }
   header ul li {
     font-size: 1.8em;
@@ -349,6 +351,7 @@ Responsive
     padding-right: 80px;
   }
 }
+
 @media (max-width: 635px) {
   header .logo {
     top: 1.6rem;
@@ -390,6 +393,28 @@ Responsive
     letter-spacing: 10px;
   }
 }
+@media (max-width: 535px) {
+  .searchBar {
+    left: 6.5%;
+  }
+  .searchBar input {
+    max-width: 180px;
+  }
+  .quest1 ul {
+    left: 6%;
+    width: 88%;
+  }
+  .quest1 ul li {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .quest2 ul {
+    top: 12%;
+    left: 6%;
+    width: 88%;
+  }
+}
 
 @media (max-width: 435px) {
   header .logo {
@@ -421,7 +446,7 @@ Responsive
 
 @media (max-width: 400px) {
   .quest1 ul {
-    top: 6%;
+    top: 5%;
   }
   .quest2 ul {
     top: 11%;
@@ -458,6 +483,9 @@ Responsive
   .toggle {
     top: 0%;
     right: -50px;
+  }
+  .quest1 ul {
+    top: 4%;
   }
   .quest2 ul li {
     font-size: 6px;
