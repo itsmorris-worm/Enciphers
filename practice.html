@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Practice page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--font awesome-->
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.css" />
+    <!---main css-->
+    <link rel="stylesheet" type="text/css" href="/css/practice.css" />
+    <!--practice css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!--home section start-->
+    <section>
+      <!--background start-->
+      <div class="sq1"></div>
+      <!--background end-->
+
+      <!--header start-->
+      <header>
+        <a href="#"><img src="/img/codo.png" class="logo" /></a>
+
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <a class="logoText">Let's Code!</a>
+        <ul class="navigation">
+          <li><a href="welcome.html" class="col">Home</a></li>
+          <li><a href="yourlecture.html" class="col">Lectures</a></li>
+          <li><a href="yournotes.html" class="col">Notes</a></li>
+          <li>
+            <a href="mailto: chandan610sharma@outlook.com" class="col"
+              >Contact</a
+            >
+          </li>
+          <li><a href="/index.html" class="col">Logout</a></li>
+        </ul>
+      </header>
+      <!--header end-->
+
+      <!--search bar start-->
+      <div class="searchBar1">
+        <input
+          type="text"
+          id="myInput1"
+          placeholder="Search topics"
+          onkeyup="searchFun1()"
+        />
+      </div>
+
+      <div class="searchBar2">
+        <input
+          type="text"
+          id="myInput2"
+          placeholder="Set Diffiulty"
+          onkeyup="searchFun2()"
+        />
+      </div>
+
+      <!--search bar end-->
+
+      <!--practice section start-->
+      <div class="quest1">
+        <ul>
+          <li>
+            <span>STATUS</span>
+            <span>PROBLEMS</span>
+            <span>LEVELS</span>
+            <span>BOOKMARK</span>
+          </li>
+        </ul>
+      </div>
+      <div class="quest2" id="myTable">
+        <ul>
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>array</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="eos-icons:endpoints"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>medium</a1>
+                <div class="med">
+                  <span
+                    class="iconify"
+                    data-icon="whh:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>matrix</a1>
+                <div class="tpc">
+                  <span class="iconify" data-icon="mdi:matrix"></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>easy</a1>
+                <div class="easy">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>strings</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="carbon:character-patterns"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>hard</a1>
+                <div class="hard">
+                  <span class="iconify" data-icon="el:fire"></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>bit manupulation</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="ant-design:field-binary-outlined"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a1>easy</a1
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="easy">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>searching</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="dashicons:code-standards"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>medium</a1>
+                <div class="med">
+                  <span
+                    class="iconify"
+                    data-icon="whh:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>sorting</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="bx:bx-sort-a-z"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>medium</a1>
+                <div class="med">
+                  <span
+                    class="iconify"
+                    data-icon="whh:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>linked list</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="carbon:text-link"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>easy</a1>
+                <div class="easy">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>binary tree</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="icon-park-outline:chart-graph"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>hard</a1>
+                <div class="hard">
+                  <span class="iconify" data-icon="el:fire"></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>binary search tree</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:graph-outline"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>easy</a1>
+                <div class="easy">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>greedy</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="carbon:choices"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>medium</a1>
+                <div class="med">
+                  <span
+                    class="iconify"
+                    data-icon="whh:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>backtracking</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="pixelarticons:track-changes"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>medium</a1>
+                <div class="med">
+                  <span
+                    class="iconify"
+                    data-icon="whh:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>stacks</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="grommet-icons:stack-overflow"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>hard</a1>
+                <div class="hard">
+                  <span class="iconify" data-icon="el:fire"></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>queue</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:human-queue"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>medium</a1>
+                <div class="med">
+                  <span
+                    class="iconify"
+                    data-icon="whh:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>heap</a1>
+                <div class="tpc">
+                  <span class="iconify" data-icon="gg:sort-za"></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>easy</a1>
+                <div class="easy">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>graph</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="tabler:manual-gearbox"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>easy</a1>
+                <div class="easy">
+                  <span
+                    class="iconify"
+                    data-icon="mdi:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>trie</a1>
+                <div class="tpc">
+                  <span class="iconify" data-icon="mdi:graph"></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>medium</a1>
+                <div class="med">
+                  <span
+                    class="iconify"
+                    data-icon="whh:campfire"
+                  ></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+
+          <li>
+            <span class="status"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><div class="item">
+                  <span
+                    class="iconify"
+                    data-icon="bi:file-earmark-excel-fill"
+                  ></span></div></a
+            ></span>
+            <span class="name"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>dynamic programming</a1>
+                <div class="tpc">
+                  <span
+                    class="iconify"
+                    data-icon="iconoir:database-restore"
+                  ></span></div></a
+            ></span>
+            <span class="level"
+              ><a style="text-decoration: none" href="https://www.google.com"
+                ><a1>hard</a1>
+                <div class="hard">
+                  <span class="iconify" data-icon="el:fire"></span></div></a
+            ></span>
+            <span class="mark"
+              ><a>
+                <div class="m">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:bookmark-add-20-filled"
+                  ></span>
+                </div>
+              </a>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <!--practice section end-->
+    </section>
+    <!--home section end-->
+
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <!--same welcomejs script start-->
+    <script type="text/javascript">
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var navigation = document.querySelector(".navigation");
+
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+
+      const searchFun1 = () => {
+        let filter = document.getElementById("myInput1").value.toUpperCase();
+        let myTable = document.getElementById("myTable");
+
+        let li = myTable.getElementsByTagName("li");
+
+        for (var i = 0; i < li.length; i++) {
+          let span = li[i].getElementsByTagName("span")[1];
+
+          if (span) {
+            let textvalue = span.textContent || span.innerHTML;
+
+            if (textvalue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+      };
+
+      const searchFun2 = () => {
+        let filter = document.getElementById("myInput2").value.toUpperCase();
+        let myTable = document.getElementById("myTable");
+
+        let li = myTable.getElementsByTagName("li");
+
+        for (var i = 0; i < li.length; i++) {
+          let span = li[i].getElementsByTagName("span")[2];
+
+          if (span) {
+            let textvalue = span.textContent || span.innerHTML;
+
+            if (textvalue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+      };
+    </script>
+
+    <!--same welcomejs script end-->
+  </body>
+</html>
