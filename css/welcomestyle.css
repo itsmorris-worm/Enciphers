@@ -311,7 +311,6 @@ Responsive
     position: absolute;
     top: 12%;
     right: 330px;
-    z-index: -1;
   }
 }
 
@@ -501,6 +500,7 @@ Responsive
     top: -35%;
     right: 130px;
     height: 110px;
+    z-index: -1;
   }
   
 }
