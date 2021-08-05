@@ -9,23 +9,25 @@ global style
 /*define custome css variables*/
 :root {
   --bg-black-150: #044749;
-  --bg-black-151: #0e2b30da;
-  --bg-black-152: #0e2b30a8;
-  --bg-black-153: #0e2b307a;
+  --bg-black-151: #000000c7;
+  --bg-black-152: #373838a8;
+  --bg-black-153: #3435357a;
 
   --bg-black-155: #0e2b30;
   --bg-fav-100: #fe4365;
   --bg-fav-101: #2c0633;
   --bg-fav-102: #0992aa;
-  --bg-fav-103: lawngreen;
-  --bg-fav-104: rgb(173, 173, 173);
+  --bg-fav-103: #0b7070;
+  --bg-fav-1033: rgb(81, 255, 0);
+
+  --bg-fav-104: rgb(231, 231, 231);
 
   --bg-black-900: #000000;
   --bg-black-100: #c0bfbf;
   --bg-black-50: #eff0f4;
   --bg-opacity: rgba(255, 255, 255, 0.5);
   --text-black-900: #000000;
-  --text-black-750: #444;
+  --text-black-750: rgb(39, 39, 39);
   --text-black-25: #fff;
   --text-black-700: rgba(255, 255, 255, 0.267);
   --text-black-600: #666666;
@@ -47,16 +49,18 @@ global style
   font-family: "Raleway", sans-serif;
 }
 section {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width: 100vw;
   height: 100vh;
-  /* max-height: 100%; */
-  height: 100%;
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: var(--text-black-25); */
+}
+.sq1 {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100vw;
+  height: 190vh;
+  background-color: var(--text-black-900);
+  opacity: 0.9;
 }
 header {
   position: absolute;
@@ -71,24 +75,31 @@ header {
 
 header .logo {
   position: absolute;
-  height: 7;
-  width: 52px;
-  top: 38px;
-  margin-left: 5px;
-  max-width: 18%;
+  height: 3.2rem;
+  width: 3.3rem;
+  top: 1.3rem;
+  left: 8rem;
+  padding-right: 5px;
+  max-width: 120%;
+  filter: invert(1);
+  opacity: 0.6;
 }
 
 header .logoText {
   position: absolute;
-  top: 41px;
-  margin-left: 68px;
+  top: 34px;
+  margin-left: 85px;
+  margin-right: 15px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  color: linear-gradient(-12deg, var(--bg-fav-101), var(--bg-black-150));
-  font-size: 22px;
+  color: var(--bg-black-100);
+  font-size: 21px;
   font-weight: 900;
   justify-content: space-between;
   align-items: center;
+}
+header .logoText.active {
+  color: var(--bg-fav-100);
 }
 
 header ul {
@@ -100,100 +111,117 @@ header ul li {
 }
 header ul li a {
   display: inline-block;
-  color: var(--bg-black-155);
-  font-weight: 500;
+  color: var(--bg-black-100);
+  font-weight: 600;
   margin-left: 40px;
   text-decoration: none;
 }
 
-.searchBar input {
+.searchBar1 {
   position: absolute;
   top: 13%;
-  left: 10%;
-  max-width: 350px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: var(--bg-fav-104);
+  left: 12%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.searchBar2 {
+  position: absolute;
+
+  top: 13%;
+  right: 10%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.searchBar1 input {
+  max-width: 300px;
   outline: none;
   line-height: 1;
-  width: 80%;
-  height: 50px;
-  padding-left: 30px;
-  padding-bottom: 4.5px;
+  width: 75rem;
+  height: 2.8rem;
+  padding: 15px 25px;
   font-size: 20px;
   font-weight: 400;
-  color: var(--bg-black-50);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--bg-black-100);
+  border: 2px solid var(--bg-black-100);
   border-radius: 55px;
   background: var(--bg-black-900);
-  opacity: 0.8;
-  z-index: 100;
+  opacity: 0.4;
+}
+.searchBar2 input {
+  max-width: 300px;
+  outline: none;
+  line-height: 1;
+  width: 75rem;
+  height: 2.8rem;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--bg-black-100);
+  border: 2px solid var(--bg-black-100);
+  border-radius: 55px;
+  background: var(--bg-black-900);
+  opacity: 0.4;
+}
+.searchBar1 input[placeholder] {
+  font-size: 17px;
+  font-weight: 500;
+  padding-bottom: 17px;
+}
+.searchBar2 input[placeholder] {
+  font-size: 17px;
+  font-weight: 500;
+  padding-bottom: 17px;
+}
+.searchBar1 input:hover {
+  opacity: 0.6;
+}
+.searchBar2 input:hover {
+  opacity: 0.6;
 }
 
-.searchBar input::placeholder {
-  padding: 2px;
-  font-size: 18px;
-  font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  /* text-align: center; */
-  display: inline-block;
-}
-.searchBar input:hover {
-  transform: scale(0.98);
-  opacity: 0.9;
-}
 .quest1 ul {
   position: absolute;
-  top: 8%;
+  display: block;
+  top: 7%;
   left: 12%;
-  max-width: 1200px;
-  width: 76%;
+  width: 78%;
   margin: 100px auto 0;
-  /* padding: 10px; */
-  padding-top: 1.2px;
-  padding-bottom: 1.2px;
-  box-sizing: border-box;
-  background-color: var(--bg-fav-104);
+  border-radius: 50px;
   color: var(--bg-black-50);
   box-shadow: inset 0 0 0 var(--bg-black-900);
-  border-radius: 10px;
   overflow: hidden;
-  opacity: 0.8;
-  z-index: 100;
+  opacity: 0.5;
 }
 
 .quest1 ul li {
   display: flex;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
+
   background-color: var(--bg-black-900);
   padding: 10px 20px;
-  /* padding-inline: 50px; */
+  padding-left: 90px;
+  padding-right: 90px;
   font-weight: 500;
   font-size: 17px;
   margin: 5px 0;
-  transition: 0.5s;
 }
+
 .quest2 ul {
   position: absolute;
-  top: 16%;
-  left: 12%;
-  max-width: 1200px;
+  top: 13%;
+  left: 13%;
   width: 76%;
   margin: 100px auto 0;
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   box-sizing: border-box;
-  background-color: var(--bg-fav-104);
   color: var(--bg-black-50);
   box-shadow: inset 0 0 0 var(--bg-black-900);
-  border-radius: 10px;
+  border-radius: 48px;
   overflow: hidden;
-  opacity: 0.8;
-  z-index: 100;
+  opacity: 0.75;
 }
 
 .quest2 ul li {
@@ -208,335 +236,115 @@ header ul li a {
   transition: 0.5s;
 }
 
-.quest3 ul {
-  position: absolute;
-  top: 108%;
-  left: 12%;
-  max-width: 1200px;
-  width: 76%;
-  margin: 100px auto 0;
-  /* padding: 10px; */
-  padding-top: 1.2px;
-  padding-bottom: 1.2px;
-  box-sizing: border-box;
-  background-color: var(--bg-fav-104);
-  color: var(--bg-black-50);
-  box-shadow: inset 0 0 0 var(--bg-black-900);
-  border-radius: 10px;
-  overflow: hidden;
-  opacity: 0.8;
-  z-index: 100;
-}
-
-.quest3 ul li {
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
-  background-color: var(--bg-black-900);
-  padding: 10px 20px;
-  padding-left: 3%;
-  font-weight: 500;
-  font-size: 17px;
-  margin: 5px 0;
-  transition: 0.5s;
-}
-
-.quest2 ul li:nth-child(1) {
-  background: var(--bg-black-155);
-}
-.quest2 ul li:nth-child(2) {
+.quest2 ul li:nth-child(3n) {
   background: var(--bg-black-151);
 }
-.quest2 ul li:nth-child(3) {
+.quest2 ul li:nth-child(3n + 1) {
   background: var(--bg-black-152);
 }
-.quest2 ul li:nth-child(4) {
+.quest2 ul li:nth-child(3n + 2) {
   background: var(--bg-black-153);
-}
-.quest2 ul li:nth-child(12) {
-  background: var(--bg-black-153);
-}
-.quest2 ul li:nth-child(13) {
-  background: var(--bg-black-152);
-}
-.quest2 ul li:nth-child(14) {
-  background: var(--bg-black-151);
-}
-.quest2 ul li:nth-child(15) {
-  background: var(--bg-black-155);
 }
 
 .quest2 ul li:hover {
   transform: scale(0.98);
   background: rgb(0, 0, 0);
+  border-radius: 50px;
 }
 .quest2 ul li span a {
-  display: flex;
+  display: grid;
+  text-decoration: none;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 5px;
   letter-spacing: 15px;
-  padding-left: 75px;
-  padding-right: 60px;
+  padding-right: 10px;
 }
-.quest2 ul li span a a1 {
-  display: flex;
+.quest2 .status .item {
+  padding-top: 7px;
+  padding-right: 80px;
+  margin-left: 70px;
+  font-size: 20px;
+  color: rgb(194, 194, 194);
+}
+.quest2 .mark .m {
+  padding-top: 7px;
+  padding-right: 46px;
+  font-size: 22px;
+  color: rgb(202, 202, 202);
+}
+.quest2 .mark .m:hover {
+  color: var(--bg-fav-100);
+}
+.quest2 .level .hard {
+  padding-top: 7px;
+  padding-right: 85px;
+  font-size: 20px;
+  color: red;
+}
+.quest2 .level .med {
+  padding-top: 7px;
+  padding-right: 85px;
+  font-size: 20px;
+  color: rgb(255, 196, 0);
+}
+.quest2 .level .easy {
+  padding-top: 7px;
+  padding-right: 85px;
+  font-size: 20px;
+  color: rgb(59, 255, 59);
+}
+.quest2 .name a1 {
+  display: none;
+  /* display: flex;
+  padding: 5px;
+  padding-right: 60px;
   color: var(--bg-black-50);
   text-decoration: none;
-  letter-spacing: 0px;
-  /* padding-left: 75px; */
-  /* padding-right: 60px; */
+  letter-spacing: 0px; */
 }
-.quest2 ul li span a i1:hover {
-  color: var(--bg-fav-100);
+.quest2 .name .tpc {
+  padding-top: 7px;
+  padding-right: 85px;
+  color: var(--bg-black-100);
+  font-size: 25px;
 }
-.quest2 ul li span a i2:hover {
-  color: var(--bg-fav-100);
-}
-.quest2 ul li span a i3:hover {
-  color: var(--bg-fav-100);
-}
-.quest2 ul li span a i4:hover {
-  color: var(--bg-fav-100);
-}
-.quest2 ul li span a i5:hover {
-  color: var(--bg-fav-100);
-}
-.quest2 .name a1:hover {
-  font-size: 20px;
+.quest2 .level a1 {
+  display: none;
+  /* display: flex;
+  padding: 5px;
   font-weight: 600;
-  color: var(--bg-fav-103);
+  padding-right: 80px;
+  text-decoration: none;
+  letter-spacing: 1px; */
 }
-.sq1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-750)
-  );
-  clip-path: none;
-  animation: spin1 8.5s linear infinite;
-  opacity: 0.4;
-}
-.sq2 {
-  position: absolute;
-  top: -5%;
-  left: 0;
-  width: 100%;
-  height: 140%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-  opacity: 0.4;
-}
-.sq3 {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-  clip-path: none;
-  animation: spin3 8.5s linear infinite;
-  opacity: 0.4;
-}
-.sq4 {
-  position: absolute;
-  top: 12%;
-  left: 0;
-  width: 100%;
-  height: 80%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-  /* clip-path: none; */
-  /* animation: spin4 8.5s linear infinite; */
-  opacity: 0.4;
-}
-.sq5 {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-  clip-path: none;
-  animation: spin4 8.5s linear infinite;
-  opacity: 0.3;
-}
-.sq6 {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-
-  clip-path: none;
-  animation: spin4 8.5s linear infinite;
-  opacity: 0.3;
-}
-.sq7 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-
-  clip-path: none;
-  animation: spin4 8.5s linear infinite;
-  opacity: 0.3;
-}
-.sq8 {
-  position: absolute;
-  top: 30%;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-
-  clip-path: none;
-  animation: spin4 8.5s linear infinite;
-  opacity: 0.4;
-}
-.sq9 {
-  position: absolute;
-  top: 60%;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(
-    -12deg,
-    var(--bg-fav-101),
-    var(--bg-black-155),
-    var(--bg-black-155),
-    var(--bg-black-900)
-  );
-
-  clip-path: none;
-  animation: spin4 8.5s linear infinite;
-  opacity: 0.3;
+.quest2 .name .tpc:hover {
+  color: var(--bg-fav-1033);
 }
 
-@keyframes spin1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(100px);
-  }
+.quest2 .link .item {
+  border: 2x solid white;
+  text-align: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 15px;
+  padding: 5px 2px;
 }
-
-@keyframes spin3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(40px);
-  }
-}
-@keyframes spin4 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(-55px);
-  }
-}
-@keyframes spin5 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(170px);
-  }
-}
-@keyframes spin6 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(-200px);
-  }
-}
-@keyframes spin7 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(170px);
-  }
-}
-@keyframes spin8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(100px);
-  }
-}
-@keyframes spin9 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: translateY(170px);
-  }
+.quest2 .link div:hover {
+  color: var(--bg-fav-100);
 }
 
 /*----------------------
-Mobile view
+Responsive 
 ----------------------*/
-
-@media (max-width: 1019px) {
-  header {
-    padding: 20px;
+@media (max-width: 1025px) {
+  .quest1 ul {
+    top: 10%;
   }
-  header .logo {
-    max-width: 60px;
+  .quest2 ul {
+    top: 15%;
   }
+}
+@media (max-width: 960px) {
   header ul {
     display: none;
   }
@@ -550,19 +358,21 @@ Mobile view
     background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
-    filter: invert(0);
+    filter: invert(1);
     z-index: 11;
   }
   .toggle.active {
     position: fixed;
-    top: 34px;
-    right: 20px;
+    top: 80px;
+    right: 10%;
+    height: 500px;
+    width: 500px;
     background: url(cross.png);
-    background-size: 30px;
+    background-size: 130%;
     background-position: center;
     background-repeat: no-repeat;
-    filter: invert(1);
-    z-index: 102;
+    z-index: 110;
+    opacity: 0;
   }
   header ul.navigation.active {
     position: fixed;
@@ -571,215 +381,410 @@ Mobile view
     width: 50%;
     height: 100%;
     display: flex;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    justify-content: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: var(--bg-black-900);
+    background-color: var(--text-black-900);
     color: var(--bg-black-50);
-    z-index: 101;
-    opacity: 0.6;
+    z-index: 111;
+    opacity: 0.8;
   }
   header ul.navigation.active .col {
-    color: white;
-    font-weight: 600;
+    color: var(--bg-black-100);
+    font-size: 24px;
+    font-weight: 800;
   }
   header ul li {
     font-size: 1.8em;
     font-weight: 600;
     margin: 5px 0;
   }
-  section {
-    padding: 20px;
+  .quest1 ul li {
+    font-size: 14px;
   }
-  .content {
-    flex-direction: column;
-    margin-top: 100px;
+  .quest1 ul li {
+    padding-left: 80px;
+    padding-right: 80px;
   }
-  .content .textBox h2 {
-    font-size: 23em;
+  .quest2 ul li {
+    font-size: 12px;
   }
-  .content .textBox {
-    max-width: 100%;
-  }
-  .content .textBox h2 {
-    font-size: 1.4em;
-  }
-  .textBox h2 span {
-    padding-right: 100px;
-    font-size: 1.6em;
-    font-weight: 900;
-  }
-  .content .textBox li {
-    font-size: 0.35em;
-    font-weight: 400;
-  }
-  .thumb {
+
+  .quest2 .name a1:hover {
     position: absolute;
-    bottom: -60%;
-    left: 60%;
-    display: flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    font-size: 13px;
   }
-
-  .thumb li img:hover {
-    transform: translateY(-5px);
+  .quest2 .link .item {
+    font-size: 12px;
   }
+}
 
-  .thumb li img {
-    height: 40px;
-    width: 40px;
+@media (max-width: 860px) {
+  header .logo {
+    top: 1.6rem;
+    left: 5.4rem;
+    padding-right: 5px;
+    max-width: 120%;
+  }
+  header .logoText {
+    top: 45px;
     margin-left: 40px;
-    max-width: 65px;
-    transform: rotate(180deg);
-    opacity: 0.8;
-  }
-
-  .thumb li span {
-    font-size: 12px;
-    font-weight: 600;
-    color: #000000;
-    display: inline-block;
-    opacity: 0.6;
-    transform: translateX(48px);
-  }
-
-  .thumb li span:hover {
-    transform: translateX(50px);
-  }
-
-  .content .imgBox .facebooks {
-    position: absolute;
-    top: -26%;
-    right: 130px;
-    height: 110px;
-  }
-}
-
-@media (max-width: 855px) {
-  .thumb {
-    left: 65%;
-  }
-
-  .thumb li img:hover {
-    transform: translateY(-5px);
-  }
-
-  .thumb li img {
-    right: 10%;
-    margin-left: 35px;
-  }
-
-  .content .imgBox .facebooks {
-    right: 120px;
-    height: 100px;
-  }
-}
-
-@media (max-width: 788px) {
-  .thumb {
-    bottom: -64%;
-    left: 60%;
-  }
-
-  .thumb li img:hover {
-    transform: translateY(-5px);
-  }
-
-  .thumb li img {
-    margin-left: 30px;
-  }
-
-  .thumb li span {
-    transform: translateX(40px);
-  }
-
-  .thumb li span:hover {
-    transform: translateX(42px);
-  }
-}
-
-@media (max-width: 685px) {
-  .thumb {
-    bottom: -63%;
-    left: 63%;
-  }
-
-  .thumb li img {
-    margin-left: 18px;
-  }
-
-  .thumb li span {
-    font-size: 12px;
-    font-weight: 600;
-    transform: translateX(25px);
-  }
-  .thumb li span:hover {
-    transform: translateX(27px);
-  }
-}
-
-@media (max-width: 640px) {
-  .content .textBox h2 {
-    font-size: 1.2em;
-  }
-  .content .textBox h2 span {
-    font-size: 1.8em;
-  }
-  .content .textBox h3 {
     font-size: 18px;
   }
-}
 
-@media (max-width: 598px) {
-  .content .textBox h2 {
-    font-size: 1em;
+  .searchBar1 {
+    top: 13%;
+    left: 12%;
   }
-  .content .textBox h2 span {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-size: 1.8em;
-  }
-  .content .textBox h3 {
-    font-size: 17px;
-  }
-}
-
-@media (max-width: 590px) {
-  .thumb {
-    bottom: 80%;
-    left: 38%;
-  }
-
-  .thumb li img:hover {
-    transform: translateY(-5px);
-  }
-
-  .thumb li img {
-    height: 40px;
+  .searchBar2 {
+    top: 13%;
     right: 10%;
-    width: 40px;
-    margin-left: -5px;
-    max-width: 65px;
   }
-
-  .thumb li span {
+  .searchBar1 input {
+    max-width: 200px;
+  }
+  .searchBar2 input {
+    max-width: 200px;
+  }
+  .searchBar1 input[placeholder] {
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+  .searchBar2 input[placeholder] {
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+  .quest1 ul li {
     font-size: 12px;
-    font-weight: 600;
-    transform: translateX(5px);
+  }
+  .quest1 ul li {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .quest2 .status .item {
+    padding-top: 4px;
+    padding-right: 80px;
+    margin-left: 40px;
+    font-size: 15px;
+    color: rgb(194, 194, 194);
+  }
+  .quest2 .mark .m {
+    padding-top: 4px;
+    padding-right: 6px;
+    font-size: 17px;
+    color: rgb(202, 202, 202);
+  }
+  .quest2 .level .hard {
+    padding-top: 4px;
+    padding-right: 85px;
+    font-size: 15px;
+    color: red;
+  }
+  .quest2 .level .med {
+    padding-top: 4px;
+    padding-right: 85px;
+    font-size: 15px;
+    color: rgb(255, 196, 0);
+  }
+  .quest2 .level .easy {
+    padding-top: 4px;
+    padding-right: 85px;
+    font-size: 15px;
+  }
+  .quest2 .name .tpc {
+    padding-top: 4px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 775px) {
+  .quest1 ul {
+    top: 8.5%;
+  }
+  .quest2 .status .item {
+    padding-top: 4px;
+    padding-right: 30px;
+    margin-left: 40px;
+    font-size: 15px;
+    color: rgb(194, 194, 194);
+  }
+  .quest2 .mark .m {
+    padding-top: 4px;
+    padding-right: 6px;
+    font-size: 17px;
+    color: rgb(202, 202, 202);
+  }
+  .quest2 .level .hard {
+    padding-top: 4px;
+    padding-right: 50px;
+    font-size: 15px;
+    color: red;
+  }
+  .quest2 .level .med {
+    padding-top: 4px;
+    padding-right: 50px;
+    font-size: 15px;
+    color: rgb(255, 196, 0);
+  }
+  .quest2 .level .easy {
+    padding-top: 4px;
+    padding-right: 50px;
+    font-size: 15px;
+  }
+  .quest2 .name .tpc {
+    padding-right: 30px;
+  }
+}
+@media (max-width: 635px) {
+  header .logo {
+    top: 1.6rem;
+    left: 3rem;
+    padding-right: 5px;
+    max-width: 120%;
+  }
+  header .logoText {
+    margin-left: 0px;
+  }
+  .toggle {
+    right: -50px;
+  }
+  .searchBar1 input {
+    height: 2.2rem;
+  }
+  .searchBar1 input[placeholder] {
+    font-size: 12px;
+    padding-bottom: 13px;
+  }
+  .searchBar2 input {
+    height: 2.2rem;
+  }
+  .searchBar2 input[placeholder] {
+    font-size: 12px;
+    padding-bottom: 13px;
+  }
+  .quest1 ul {
+    top: 6%;
+  }
+  .quest2 ul {
+    top: 11%;
+  }
+  .quest2 ul li {
+    font-size: 10px;
+  }
+  .quest2 .status .item {
+    padding-top: 4px;
+    padding-right: 20px;
+    margin-left: 30px;
+    font-size: 15px;
+    color: rgb(194, 194, 194);
+  }
+  .quest2 .mark .m {
+    padding-top: 4px;
+    padding-right: 6px;
+    font-size: 17px;
+    color: rgb(202, 202, 202);
+  }
+  .quest2 .level .hard {
+    padding-top: 4px;
+    padding-right: 20px;
+    font-size: 15px;
+    color: red;
+  }
+  .quest2 .level .med {
+    padding-top: 4px;
+    padding-right: 20px;
+    font-size: 15px;
+    color: rgb(255, 196, 0);
+  }
+  .quest2 .level .easy {
+    padding-top: 4px;
+    padding-right: 20px;
+    font-size: 15px;
+  }
+  .quest2 .name .tpc {
+    padding-right: 15px;
+  }
+}
+@media (max-width: 535px) {
+  .searchBar1 {
+    left: 6.5%;
+  }
+  .searchBar1 input {
+    max-width: 160px;
+  }
+  .searchBar2 {
+    right: 6.5%;
+  }
+  .searchBar2 input {
+    max-width: 160px;
+  }
+  .quest1 ul {
+    left: 6%;
+    width: 88%;
+  }
+  .quest1 ul li {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 12px;
   }
 
-  .thumb li span:hover {
-    transform: translateX(7px);
-  }
-  .content .imgBox .facebooks {
-    top: -25%;
-    right: 80px;
+  .quest2 ul {
+    top: 12%;
+    left: 6%;
+    width: 88%;
   }
 }
 
-/*---------------
-footer
-----------------*/
+@media (max-width: 435px) {
+  header .logo {
+    height: 3rem;
+    width: 3rem;
+    top: 1.6rem;
+    left: 2.3rem;
+    padding-right: 5px;
+    max-width: 120%;
+  }
+  header .logoText {
+    margin-left: -15px;
+    font-size: 14px;
+  }
+
+  .searchBar1 input {
+    max-width: 130px;
+  }
+  .searchBar2 input {
+    max-width: 130px;
+  }
+  .searchBar1 input[placeholder] {
+    font-size: 10px;
+    padding-bottom: 13px;
+  }
+  .searchBar2 input[placeholder] {
+    font-size: 10px;
+    padding-bottom: 13px;
+  }
+  .quest2 .status .item {
+    margin-left: 25px;
+  }
+  .quest1 ul li {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 11px;
+  }
+  .quest2 ul li {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .quest1 ul {
+    top: 5.2%;
+  }
+  .quest1 ul li {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 11px;
+  }
+  .quest2 ul {
+    top: 11%;
+  }
+  .quest2 ul li {
+    font-size: 6px;
+  }
+  .quest2 .status .item {
+    padding-right: 10px;
+    margin-left: 30px;
+    font-size: 13px;
+  }
+  .quest2 .mark .m {
+    padding-right: 10px;
+    font-size: 15px;
+  }
+  .quest2 .level .hard {
+    padding-right: 10px;
+    font-size: 12px;
+  }
+  .quest2 .level .med {
+    padding-right: 10px;
+    font-size: 12px;
+  }
+  .quest2 .level .easy {
+    padding-right: 10px;
+    font-size: 12px;
+  }
+  .quest2 .name .tpc {
+    padding-right: 12px;
+  }
+}
+@media (max-width: 340px) {
+  header .logo {
+    height: 2.4rem;
+    width: 2.4rem;
+    top: 1.4rem;
+  }
+  header .logoText {
+    top: 43%;
+    margin-left: -25px;
+    font-size: 11px;
+  }
+  .quest2 .status .item {
+    margin-left: 7px;
+  }
+
+  .toggle {
+    top: 0%;
+    right: -50px;
+  }
+  .quest1 ul {
+    top: 4%;
+  }
+  .quest1 ul li {
+    font-size: 8px;
+  }
+}
+@media (max-width: 281px) {
+  .toggle {
+    top: 0%;
+    right: -80px;
+  }
+  .searchBar1 input {
+    max-width: 100px;
+  }
+  .searchBar2 input {
+    max-width: 100px;
+  }
+  .searchBar1 input[placeholder] {
+    font-size: 8px;
+    padding-bottom: 14px;
+  }
+  .searchBar2 input[placeholder] {
+    font-size: 8px;
+    padding-bottom: 14px;
+  }
+  .quest2 .status .item {
+    padding-right: 8px;
+    font-size: 8px;
+  }
+  .quest2 .mark .m {
+    padding-right: 8px;
+    font-size: 8px;
+  }
+  .quest2 .level .hard {
+    padding-right: 5px;
+    font-size: 8px;
+  }
+  .quest2 .level .med {
+    padding-right: 5px;
+    font-size: 8px;
+  }
+  .quest2 .level .easy {
+    padding-right: 5px;
+    font-size: 8px;
+  }
+  .quest2 .name .tpc {
+    padding-right: 8px;
+    font-size: 8px;
+  }
+}
