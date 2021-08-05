@@ -311,6 +311,7 @@ Responsive
     position: absolute;
     top: 12%;
     right: 330px;
+    z-index: -1;
   }
 }
 
