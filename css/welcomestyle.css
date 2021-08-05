@@ -816,8 +816,8 @@ Responsive
       font-size: 15px;
     }
     .content .imgBox .facebooks {
-      top: 20%;
-      right: 140px;
+       top: 16%;
+      right: 150px;
       height: 180px;
       opacity: 0.2;
     }
