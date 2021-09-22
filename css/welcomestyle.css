@@ -52,7 +52,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-black-100);
+  /* background-color: var(--bg-black-100); */
   opacity: 0.9;
 }
 
@@ -208,7 +208,7 @@ header ul li a {
   
 }
 
-.thumb {
+/* .thumb {
   position: absolute;
   top: 15%;
   right: 10px;
@@ -265,7 +265,7 @@ header ul li a {
   top: 35%;
   right: -120px;
   opacity: 0;
-}
+} */
 
 /* .circle1 {
   position: absolute;
@@ -876,3 +876,4 @@ Responsive
       opacity: 0.2;
     }
   }
+}
